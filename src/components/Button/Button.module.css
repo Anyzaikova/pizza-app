@@ -19,6 +19,7 @@
     text-transform: uppercase;
     font-size: 15px;
     text-align: center;
+    box-shadow: 0 10px 40px 0 rgba(122, 129, 190, 0.16);
 }
 .accent {
     background: var(--primary-color);
