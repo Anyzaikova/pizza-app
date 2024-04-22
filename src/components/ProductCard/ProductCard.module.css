@@ -1,0 +1,81 @@
+
+.head {
+    position: relative;
+    min-height: 165px;
+    border-radius: 19px;
+
+}
+.link {
+    text-decoration: none;
+}
+.card {
+    box-shadow: 18px 18px 36px 0 rgba(211, 209, 216, 0.25);
+    background: white;
+    border-radius: 19px;
+    width: 320px;
+
+}
+
+.footer {
+    padding: 12px;
+}
+
+.name {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: normal;
+
+}
+
+.ingredients {
+    color: var(--text-secondary-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+
+}
+
+.price {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 20px;
+    background-color: var(--white-color);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.currency {
+    color: var(--primary-color);
+}
+.rating {
+    position: absolute;
+    bottom: -12px;
+    left: 15px;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 12px;
+    background-color: var(--white-color);
+    padding: 3px 8px;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px 0 rgba(254, 114, 76, 0.2);
+}
+.add-to-cart {
+    fill: #fe724c;
+    box-shadow: 0 8px 18px 0 rgba(254, 114, 76, 0.4);
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    border: navajowhite;
+    cursor: pointer;
+}
+.add-to-cart:hover {
+    background: var(--primary-hover-color);
+}
