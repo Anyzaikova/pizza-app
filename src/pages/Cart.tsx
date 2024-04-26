@@ -7,3 +7,5 @@ export function Cart() {
         </>
     )
 }
+
+export default Cart;
