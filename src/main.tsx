@@ -1,7 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {Cart} from "./pages/Cart";
+import {Cart} from "./pages/Cart/Cart";
 import {createBrowserRouter, RouterProvider, defer} from "react-router-dom";
 import {Layout} from "./layout/Menu/Layout";
 import Product from "./pages/Product/Product";

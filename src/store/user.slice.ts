@@ -5,7 +5,6 @@ import {LoginResponse} from "../Interfaces/auth.interface";
 import {PREFIX} from "../helpers/API";
 import {Profile} from "../Interfaces/user.interface";
 import {RootState} from "./store";
-import {RegisterForm} from "../pages/Register/Register";
 
 export const JWT_PERSISTENT_STATE = 'userData';
 
@@ -76,7 +75,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        logout: (state) => {
+        logout: (state:UserState) => {
             state.jwt = null;
         },
         clearLoginError: (state) => {
@@ -87,25 +86,25 @@ export const userSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(login.fulfilled, (state, action:PayloadAction<LoginResponse>) => {
+        builder.addCase(login.fulfilled, (state:UserState, action:PayloadAction<LoginResponse>) => {
             if (!action.payload) {
                 return;
             }
             state.jwt = action.payload.access_token;
         });
-        builder.addCase(login.rejected, (state, action:PayloadAction<string>) => {
+        builder.addCase(login.rejected, (state:UserState, action) => {
             state.loginErrorMessage = action.error.message;
         });
-        builder.addCase(getProfile.fulfilled, (state, action:PayloadAction<Profile>) => {
+        builder.addCase(getProfile.fulfilled, (state:UserState, action:PayloadAction<Profile>) => {
             state.profile = action.payload;
         });
-        builder.addCase(register.fulfilled, (state, action:PayloadAction<RegisterForm>) => {
+        builder.addCase(register.fulfilled, (state:UserState, action:PayloadAction<LoginResponse>) => {
             if (!action.payload) {
                 return;
             }
             state.jwt = action.payload.access_token;
         });
-        builder.addCase(register.rejected, (state, action:PayloadAction<string>) => {
+        builder.addCase(register.rejected, (state:UserState, action) => {
             state.registerErrorMessage = action.error.message;
         });
 
