@@ -1,4 +1,4 @@
-import Headling from "../../Headling/Headling";
+import Headling from "../../components/Headling/Headling";
 import Search from "../../components/Search/Search";
 import styles from './Menu.module.css';
 import {PREFIX} from "../../helpers/API";

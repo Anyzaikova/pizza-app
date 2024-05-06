@@ -2,7 +2,7 @@ import {useParams, useNavigate} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import {PREFIX} from "../../helpers/API";
-import Headling from "../../Headling/Headling";
+import Headling from "../../components/Headling/Headling";
 import Button from "../../components/Button/Button";
 import styles from './Product.module.css';
 import {cartActions} from "../../store/cart.slice";

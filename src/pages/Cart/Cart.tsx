@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, RootState} from "../../store/store";
-import Headling from "../../Headling/Headling";
+import Headling from "../../components/Headling/Headling";
 import CartItem from "../../components/CartItem/CartItem";
 import {useEffect, useState} from "react";
 import Product from "../Product/Product";

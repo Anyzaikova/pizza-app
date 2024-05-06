@@ -1,6 +1,6 @@
 import styles from './Login.module.css';
 import {Link, useNavigate} from 'react-router-dom';
-import Headling from "../../Headling/Headling";
+import Headling from "../../components/Headling/Headling";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import {FormEvent, useEffect} from "react";

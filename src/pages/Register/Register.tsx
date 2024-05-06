@@ -1,5 +1,5 @@
 import styles from '../Login/Login.module.css';
-import Headling from "../../Headling/Headling";
+import Headling from "../../components/Headling/Headling";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import {Link, useNavigate} from 'react-router-dom';
