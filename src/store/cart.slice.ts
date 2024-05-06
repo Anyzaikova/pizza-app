@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {loadState} from "./storage";
-import {act} from "react-dom/test-utils";
+
 
 
 export const CART_PERSISTENT_STATE = 'cartData';
@@ -22,6 +22,9 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
+        clean: (state)=>{
+            state.items=[];
+        },
         delete: (state, action: PayloadAction<number>) => {
             state.items = state.items.filter(i => i.id !== action.payload);
         },
@@ -58,5 +61,6 @@ export const cartSlice = createSlice({
         }
     }
 });
+
 export default cartSlice.reducer;
 export const cartActions = cartSlice.actions;

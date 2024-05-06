@@ -17,11 +17,13 @@
 .actions {
     margin-left: auto;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     align-self: flex-start;
 }
-
+.item:hover {
+    cursor: pointer;
+}
 .description {
     display: flex;
     gap: 10px;
